@@ -55,7 +55,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+  var addSum = parseInt(sum(a,b)[0]);
+  addSum = parseInt(sum(addSum,c)[0]);  
+  var addAnswer = a +' and '+ b + ' and ' + c + ' sum to ' + addSum + '.';
 
+  var addMultiple = parseInt(multiply(a,b)[0]);
+  addMultiple = parseInt(multiply(addMultiple,c)[0]);  
+  var multipleAnswer = 'The product of ' + a +' and '+ b + ' and ' + c + ' is ' + addMultiple + '.';
+
+  console.log(addSum, addMultiple, addAnswer, multipleAnswer);
+  return [addSum, addMultiple, addAnswer, multipleAnswer];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
