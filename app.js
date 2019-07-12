@@ -31,11 +31,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-
+  var multipleSum = a * b;
+  var answer = 'The product of ' + a + ' and ' + b + ' is ' + multipleSum + '.';
+ 
+  return [multipleSum, answer]
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -52,7 +55,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+  var addSum = parseInt(sum(a,b)[0]);
+  addSum = parseInt(sum(addSum,c)[0]);  
+  var addAnswer = a +' and '+ b + ' and ' + c + ' sum to ' + addSum + '.';
 
+  var addMultiple = parseInt(multiply(a,b)[0]);
+  addMultiple = parseInt(multiply(addMultiple,c)[0]);  
+  var multipleAnswer = 'The product of ' + a +' and '+ b + ' and ' + c + ' is ' + addMultiple + '.';
+
+  console.log(addSum, addMultiple, addAnswer, multipleAnswer);
+  return [addSum, addMultiple, addAnswer, multipleAnswer];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
