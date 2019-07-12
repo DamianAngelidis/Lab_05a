@@ -114,7 +114,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+  var multipleAll = 1;
+  for(var i =0; i < multArr.length; i++) {
+    multipleAll = parseInt(multiply(multipleAll,multArr[i])[0]);
+  }
+  var fullSentence = 'The numbers ' + multArr + ' have a product of ' + multipleAll + '.';
+  
+  console.log(multipleAll, fullSentence);
+  return [multipleAll, fullSentence];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
