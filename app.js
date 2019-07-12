@@ -86,7 +86,14 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+  var sumAll = 0;
+  for(var i =0; i < sumArr.length; i++) {
+    sumAll = parseInt(sum(sumAll,sumArr[i])[0]);
+  }
+  var fullSentence = sumArr + ' was passed in as an array of numbers, and ' + sumAll + ' is their sum.';
+  
+  console.log(sumAll, fullSentence);
+  return [sumAll, fullSentence];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
